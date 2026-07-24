@@ -1,0 +1,16 @@
+material_id,name,current_stock,minimum_stock,category
+1,Caffeine,120,100,Chemical
+2,Vitamin C,80,100,Vitamins
+3,Magnesium,150,120,Minerals
+4,Calcium,95,100,Minerals
+5,Gelatin,300,150,Binders
+6,Omega 3,60,80,Oils
+7,Zinc,140,100,Minerals
+8,Vitamin D3,50,75,Vitamins
+9,Vitamin B12,90,70,Vitamins
+10,Biotin,40,60,Vitamins
+11,Collagen,200,150,Proteins
+12,Iron,130,100,Minerals
+13,Coenzyme Q10,45,50,Supplements
+14,Melatonin,70,50,Supplements
+15,Probiotics,110,90,Bacterial cultures
