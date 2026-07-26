@@ -1,84 +1,207 @@
-# Eurocaps — Raw Material \& Order Management System
+# Eurocaps — Raw Material & Order Management System
 
-A desktop application for managing raw material inventory, placing supplier orders, and generating reports, built for **Eurocaps**, a supplement manufacturer.
+A Python-based desktop application for managing raw material inventory, supplier orders, stock updates, and business reports.
 
-This was my final IT project for **Year 1 of Business IT \& Management (HBO)**. The app was built together with AI assistance (Claude), and scored a **9.8/10**.
+This project was developed as my final Year 1 Business IT & Management project at Rotterdam University of Applied Sciences, based on a real-world business scenario involving Eurocaps, a supplement manufacturer.
+
+**Final grade: 9.8/10**
+
+**Python | Tkinter | CSV | Desktop Application | Business Process Improvement**
+
+## Application Preview
+
+![Eurocaps Inventory Management System](Eurocaps%20app%20inventory%20screen.png)
+
+## Overview
+
+The Eurocaps Inventory & Order Management System is a desktop application designed to support business operations related to raw material inventory and supplier orders.
+
+The application provides functionality for:
+
+- Managing raw material inventory
+- Monitoring stock levels and stock status
+- Placing and tracking supplier orders
+- Managing supplier information
+- Updating inventory levels
+- Generating inventory and order reports
+- Exporting reports as `.txt` files
+
+The project combines software development with practical business process improvement, focusing on creating a simple and accessible solution for managing operational data.
 
 ## Features
 
-* 🔐 **Login screen** to access the system
-* 📦 **Inventory overview** — searchable table of all raw materials, with live stock/status statistics (OK vs. Low stock)
-* 🛒 **Place orders** — select a material, quantity and supplier, with an optional rush-order flag; keeps an order history
-* 🏭 **Supplier management** — view, edit and delete suppliers
-* ✏️ **Stock updates** — adjust the current stock level of any material
-* 📊 **Reports** — generate and preview an inventory or orders report, and export it as a `.txt` file
+### 🔐 Login System
 
+A login screen provides access to the application.
 
+> **Demo credentials**
+>
+> Username: `123`  
+> Password: `123`
+
+The login system is intended for demonstration purposes and is not designed as a production-ready authentication system.
+
+### 📦 Inventory Management
+
+- View all raw materials in a searchable inventory table
+- Monitor current stock levels
+- View stock status statistics
+- Identify materials with low stock levels
+
+### 🛒 Supplier Orders
+
+- Select a raw material
+- Specify the required quantity
+- Select a supplier
+- Mark orders as rush orders when necessary
+- Maintain an order history
+
+### 🏭 Supplier Management
+
+- View supplier information
+- Edit supplier details
+- Delete suppliers
+
+### ✏️ Stock Updates
+
+- Update the current stock level of raw materials
+- Keep inventory information up to date
+
+### 📊 Reports
+
+- Generate inventory reports
+- Generate order reports
+- Preview generated reports
+- Export reports as `.txt` files
 
 ## Tech Stack
 
-* **Python 3** (standard library only — no external packages required)
-* **Tkinter** for the GUI (included with standard Python installs)
-* **CSV files** as the data store (no database needed)
-
-
+- **Python 3** — Application development and business logic
+- **Tkinter** — Graphical user interface
+- **CSV** — Data storage
+- **Python Standard Library** — No external packages required
 
 ## Project Structure
 
+```text
+Eurocaps-app/
+│
+├── app.py
+├── inventory.csv
+├── orders.csv
+├── suppliers.csv
+├── Eurocaps app inventory screen.png
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
-Eurocapsapp\_english/
-├── app.py            # main application
-├── inventory.csv     # raw material stock data
-├── orders.csv        # order history
-├── suppliers.csv     # supplier contact data
-└── README.md
-```
 
-The app locates the CSV files relative to `app.py` itself, so the whole folder can be moved, renamed, or downloaded anywhere on your computer and it will still work — as long as `app.py` and the three `.csv` files stay together in the same folder.
+### Files
 
+| File | Purpose |
+|---|---|
+| `app.py` | Main application containing the user interface and application logic |
+| `inventory.csv` | Stores raw material inventory data |
+| `orders.csv` | Stores supplier order history |
+| `suppliers.csv` | Stores supplier information |
+| `Eurocaps app inventory screen.png` | Screenshot showing the application interface |
+| `README.md` | Project documentation |
+| `LICENSE` | Project license |
 
+The application locates the CSV files relative to `app.py`. This allows the complete project folder to be moved or renamed while maintaining functionality, as long as `app.py` and the three CSV files remain together.
 
 ## Requirements
 
-* Python 3.10 or newer
-* Tkinter (bundled with Python on Windows and macOS; on Linux, install it separately if missing, e.g. `sudo apt install python3-tk`)
+- Python 3.10 or newer
+- Tkinter
 
-No `pip install` is required — the project only uses Python's standard library.
+Tkinter is included with standard Python installations on Windows and macOS. On Linux, Tkinter may need to be installed separately.
 
-
+No external Python packages are required.
 
 ## How to Run
 
-1. Make sure Python 3 is installed. Check with:
+### 1. Install Python
 
+Make sure Python 3.10 or newer is installed.
+
+Check your Python version with:
+
+```bash
+python --version
 ```
-   python --version
-   ```
 
-2. Download or clone this repository.
-3. Open a terminal in the project folder and run:
+### 2. Download or Clone the Repository
 
+Download the repository or clone it using Git:
+
+```bash
+git clone https://github.com/1119071/Eurocaps-app.git
 ```
-   python app.py
-   ```
 
-4. Log in with:
+Navigate to the project directory:
 
-   * **Username:** `123`
-   * **Password:** `123`
+```bash
+cd Eurocaps-app
+```
 
-   (This is a demo login for the school project — replace it with real authentication before using this in production.)
+### 3. Run the Application
 
+Start the application with:
 
+```bash
+python app.py
+```
 
-   ## Notes
+### 4. Log In
 
-* All data is stored in plain CSV files (`inventory.csv`, `orders.csv`, `suppliers.csv`). Editing these files outside the app (e.g. in Excel) is possible, but make sure to keep them **comma-separated** and keep the header row unchanged, or the app won't be able to read them correctly.
-* This project was developed as a school assignment; the login system, data storage, and error handling are intentionally simple and are not meant for production use.
+Use the following demo credentials:
 
+```text
+Username: 123
+Password: 123
+```
 
+## Data Storage
 
-  ## Acknowledgements
+The application stores its data in three CSV files:
 
-  This application was developed with the help of AI (Claude by Anthropic) as part of the development process, as agreed for this assignment.
+- `inventory.csv` — Raw material inventory
+- `orders.csv` — Supplier order history
+- `suppliers.csv` — Supplier information
 
+The CSV files can be edited externally using applications such as Microsoft Excel. However, the comma-separated format and header rows should be preserved to ensure the application continues to read the data correctly.
+
+## Project Context
+
+This project was developed as my final Year 1 project for the Bachelor of Business IT & Management at Rotterdam University of Applied Sciences.
+
+The project focuses on applying programming and information technology to a practical business scenario. The application combines a graphical user interface, data management, business logic, and operational process support.
+
+The project received a final grade of **9.8/10**.
+
+## Limitations
+
+This project was developed as an educational project and is not intended for production use without further development.
+
+Known limitations include:
+
+- The login system uses a simple demo username and password
+- Data is stored in CSV files rather than a database
+- Authentication is not connected to a secure user management system
+- Error handling and data validation are intentionally simple
+- The application would require additional security and infrastructure for production use
+
+These limitations were considered appropriate for the scope of the Year 1 project.
+
+## AI Usage
+
+AI tools were used as part of the development process, primarily to support coding, problem-solving, and clarification during development.
+
+The application was developed with AI assistance using Claude by Anthropic. The use of AI was permitted as part of the project assignment.
+
+The final application, implementation decisions, testing, and project documentation were reviewed and developed as part of the project work.
+
+## License
+
+This project is shared for portfolio and educational purposes under the MIT License.
